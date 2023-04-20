@@ -14,8 +14,26 @@ function generatePassword() {
         window.alert("Your password must be less than 128 characters.");
         return;
       }
+      var confirmSpecialChar = confirm("Click OK to confirm adding in special characters.");
+      var chars = "";
+      if (confirmSpecialChar) {
+        chars += "!@#$%^&*()_+~`|}{[]\:;?><,./-=";
+      }
+      var confirmNumbericNumbers = confirm("Click OK to confirm adding in numberic characters.");
+      if (confirmNumbericNumbers) {
+        chars += "0123456789";
+      }
+      var confirmLowercaseLetters = confirm("Click OK to confirm adding in lowercase characters");
+      if(confirmLowercaseLetters){
+        chars += "abcdefghijklmnopqrstuvwxyz"
+      }
+      var confirmUppercaseLetters = confirm("Click OK to confirm adding in uppercase characters.");
+      if (confirmUppercaseLetters) {
+        chars += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      }
 
 
+return password;
 }
 function writePassword() {
   var password = generatePassword();
