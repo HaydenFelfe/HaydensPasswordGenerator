@@ -9,10 +9,10 @@ function generatePassword() {
         return;
     } else if (passwordLength < 8) {
         window.alert("Your password must be at least 8 characters.");
-        return;
+        return null;
     } else if (passwordLength > 128) {
         window.alert("Your password must be less than 128 characters.");
-        return;
+        return null;
     }
     var confirmSpecialChar = confirm("Click OK to confirm adding in special characters.");
     var chars = "";
